@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white; /* Fondo blanco */
+    font-family: Arial, sans-serif;
+}
+
+.dataphone {
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: orange;
+    padding: 20px;
+    width: 320px;
+}
+
+.screen {
+    height: 100px; /* Pantalla más grande */
+    background-color: white;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column; /* Mostrar el valor debajo del texto */
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: right;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: lightgray;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+}
+
+.clear-btn {
+    background-color: yellow;
+}
+
+.enter-btn {
+    background-color: green;
+    color: white;
+}
+
+.function-btn {
+    background-color: lightgray;
+}
+
+.small-btn {
+    padding: 10px; /* Hacer los botones F1 y F2 más pequeños */
+}
+
+.long-btn {
+    grid-row: span 2; /* Hacer el botón ENTER más alargado */
+    padding: 10px 20px; /* Ajustar el tamaño del botón ENTER */
+}
+
+@media (max-width: 320px) {
+    .dataphone {
+        width: 100%;
+        padding: 10px;
+    }
+    .btn {
+        padding: 10px;
+    }
+}
